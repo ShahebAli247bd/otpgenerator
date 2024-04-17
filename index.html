@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            margin: 0 auto;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Courier New', Courier, monospace;
+            max-width: 400px;
+            background: rgba(223, 137, 137, 0.5)
+        }
+
+        .inputHoder {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .inputHoder input {
+            width: 30px;
+            border: 0;
+            border-radius: 5px;
+            padding: 5px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            border: 1px solid rgba(223, 137, 137, 0.5)
+        }
+
+        .inputHoder input:focus {
+            outline: none;
+            border: 1px solid #009dff;
+        }
+
+        .otpContainer {
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .fail {
+            color: red;
+            border: 1px solid red;
+            border-radius: 20px;
+            padding: 10px 20px;
+
+        }
+
+        .success {
+            color: Green;
+            border: 1px solid green;
+            border-radius: 20px;
+            padding: 10px 20px;
+        }
+
+        .regenerate {
+            display: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>OPT Generator</h3>
+        <div class="inputHoder" id="inputHolderId">
+            <input type="text" maxlength="1" minlength="1" />
+            <input type="text" maxlength="1" minlength="1" />
+            <input type="text" maxlength="1" minlength="1" />
+            <input type="text" maxlength="1" minlength="1" />
+        </div>
+        <p class="otpContainer" id="otpContainerId">...</p>
+        <p class="regenerate" id="regenerate">@</p>
+        <p class="message" id="messageId"></p>
+        <p class="timer" id="timerId"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
